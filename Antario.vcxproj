@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{1B8103F7-F793-47B0-9FBE-44EC66BC319D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>dev1337</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <ProjectName>galaxy_sdk</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</IntDir>
+    <ExecutablePath>$(VC_ExecutablePath_x86);$(WindowsSDK_ExecutablePath);$(VS_ExecutablePath);$(MSBuild_ExecutablePath);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);$(ExecutablePath);$(DXSDK_DIR)Utilities\bin\x86</ExecutablePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(IncludePath);$(DXSDK_DIR)Include</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86;$(LibraryPath);$(DXSDK_DIR)Lib\x86</LibraryPath>
+    <TargetName>hvh</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</IntDir>
+    <ExecutablePath>$(VC_ExecutablePath_x86);$(WindowsSDK_ExecutablePath);$(VS_ExecutablePath);$(MSBuild_ExecutablePath);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);$(ExecutablePath);$(DXSDK_DIR)Utilities\bin\x86</ExecutablePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(IncludePath);$(DXSDK_DIR)Include</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86;$(LibraryPath);$(DXSDK_DIR)Lib\x86</LibraryPath>
+    <TargetName>hvh</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;ANTARIO_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <MapExports>true</MapExports>
+      <AssemblyDebug>true</AssemblyDebug>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;ANTARIO_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <StringPooling>
+      </StringPooling>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <EnableParallelCodeGeneration>
+      </EnableParallelCodeGeneration>
+      <RuntimeTypeInfo>
+      </RuntimeTypeInfo>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalOptions>
+      </AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <PerUserRedirection>false</PerUserRedirection>
+      <MapExports>true</MapExports>
+      <AssemblyDebug>true</AssemblyDebug>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="galaxy\core\Animations System\animation_system.cpp" />
+    <ClCompile Include="galaxy\core\Premium\exploits.cpp" />
+    <ClCompile Include="galaxy\core\Premium\fake_lag.cpp" />
+    <ClCompile Include="galaxy\core\Premium\premium_stuff.cpp" />
+    <ClCompile Include="galaxy\core\Visuals\other_esp.cpp" />
+    <ClCompile Include="galaxy\c_hooks.cpp" />
+    <ClCompile Include="galaxy\dll_main.cpp" />
+    <ClCompile Include="galaxy\core\Aimbot\c_ragebot.cpp" />
+    <ClCompile Include="galaxy\core\Aimbot\Autowall.cpp" />
+    <ClCompile Include="galaxy\core\Aimbot\EnginePrediction.cpp" />
+    <ClCompile Include="galaxy\core\Aimbot\lag_compensation.cpp" />
+    <ClCompile Include="galaxy\core\AntiAim\c_antiaim.cpp" />
+    <ClCompile Include="galaxy\core\Legit\Legitbot.cpp" />
+    <ClCompile Include="galaxy\core\Resolver\Resolver.cpp" />
+    <ClCompile Include="galaxy\core\Visuals\c_esp.cpp" />
+    <ClCompile Include="galaxy\gui\imgui\dx9\imgui_impl_dx9.cpp" />
+    <ClCompile Include="galaxy\gui\imgui\imgui.cpp" />
+    <ClCompile Include="galaxy\gui\imgui\imgui_draw.cpp" />
+    <ClCompile Include="galaxy\hooking_mode\bone_processing_hook.cpp" />
+    <ClCompile Include="galaxy\hooking_mode\createmove_hook.cpp" />
+    <ClCompile Include="galaxy\hooking_mode\directx_preset_hook.cpp" />
+    <ClCompile Include="galaxy\hooking_mode\dme_hook.cpp" />
+    <ClCompile Include="galaxy\hooking_mode\event_hook.cpp" />
+    <ClCompile Include="galaxy\hooking_mode\fsn_hook.cpp" />
+    <ClCompile Include="galaxy\hooking_mode\hooking_init.cpp" />
+    <ClCompile Include="galaxy\hooking_mode\lock_cursor_hook.cpp" />
+    <ClCompile Include="galaxy\hooking_mode\oview_hook.cpp" />
+    <ClCompile Include="galaxy\hooking_mode\painttraverse_hook.cpp" />
+    <ClCompile Include="galaxy\hooking_mode\sceneend_hook.cpp" />
+    <ClCompile Include="galaxy\hooking_mode\vfunc_hook.cpp" />
+    <ClCompile Include="galaxy\hooking_mode\wndproc_hook.cpp" />
+    <ClCompile Include="galaxy\gui\config_system.cpp" />
+    <ClCompile Include="galaxy\gui\menu_system.cpp" />
+    <ClCompile Include="galaxy\valve_sdk\CEntity.cpp" />
+    <ClCompile Include="galaxy\valve_sdk\checksum_crc.cpp" />
+    <ClCompile Include="galaxy\valve_utils\GlobalVars.cpp" />
+    <ClCompile Include="galaxy\valve_utils\Interfaces.cpp" />
+    <ClCompile Include="galaxy\valve_utils\Math.cpp" />
+    <ClCompile Include="galaxy\valve_utils\NetvarManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="galaxy\core\Animations System\animation_system.h" />
+    <ClInclude Include="galaxy\core\Premium\exploits.h" />
+    <ClInclude Include="galaxy\core\Premium\fakelag.h" />
+    <ClInclude Include="galaxy\core\Premium\premium_stuff.h" />
+    <ClInclude Include="galaxy\core\Visuals\other_esp.h" />
+    <ClInclude Include="galaxy\c_hooks.h" />
+    <ClInclude Include="galaxy\core\Aimbot\c_ragebot.h" />
+    <ClInclude Include="galaxy\core\Aimbot\Autowall.h" />
+    <ClInclude Include="galaxy\core\Aimbot\EnginePrediction.h" />
+    <ClInclude Include="galaxy\core\Aimbot\lag_compensation.h" />
+    <ClInclude Include="galaxy\core\AntiAim\c_antiaim.h" />
+    <ClInclude Include="galaxy\core\external_inclues.h" />
+    <ClInclude Include="galaxy\core\Legit\Legitbot.h" />
+    <ClInclude Include="galaxy\core\Misc\Misc.h" />
+    <ClInclude Include="galaxy\core\Resolver\Resolver.h" />
+    <ClInclude Include="galaxy\core\Visuals\c_esp.h" />
+    <ClInclude Include="galaxy\gui\imgui\dx9\imgui_impl_dx9.h" />
+    <ClInclude Include="galaxy\gui\imgui\font.hh" />
+    <ClInclude Include="galaxy\gui\imgui\imconfig.h" />
+    <ClInclude Include="galaxy\gui\imgui\imgui.h" />
+    <ClInclude Include="galaxy\gui\imgui\imgui_internal.h" />
+    <ClInclude Include="galaxy\gui\imgui\stb_rect_pack.h" />
+    <ClInclude Include="galaxy\gui\imgui\stb_textedit.h" />
+    <ClInclude Include="galaxy\gui\imgui\stb_truetype.h" />
+    <ClInclude Include="galaxy\hooking_mode\hooking_init.h" />
+    <ClInclude Include="galaxy\gui\archivex.hpp" />
+    <ClInclude Include="galaxy\gui\config_system.h" />
+    <ClInclude Include="galaxy\gui\menu_system.h" />
+    <ClInclude Include="galaxy\hooking_mode\vfunc_hook.hpp" />
+    <ClInclude Include="galaxy\valve_sdk\bspflags.h" />
+    <ClInclude Include="galaxy\valve_sdk\CEntity.h" />
+    <ClInclude Include="galaxy\valve_sdk\CGlobalVarsBase.h" />
+    <ClInclude Include="galaxy\valve_sdk\CHandle.h" />
+    <ClInclude Include="galaxy\valve_sdk\checksum_crc.h" />
+    <ClInclude Include="galaxy\valve_sdk\CInput.h" />
+    <ClInclude Include="galaxy\valve_sdk\ClientClass.h" />
+    <ClInclude Include="galaxy\valve_sdk\CModelRender.h" />
+    <ClInclude Include="galaxy\valve_sdk\CPrediction.h" />
+    <ClInclude Include="galaxy\valve_sdk\datamap.h" />
+    <ClInclude Include="galaxy\valve_sdk\Definitions.h" />
+    <ClInclude Include="galaxy\valve_sdk\Hitboxes.h" />
+    <ClInclude Include="galaxy\valve_sdk\IBaseClientDll.h" />
+    <ClInclude Include="galaxy\valve_sdk\IClientEntity.h" />
+    <ClInclude Include="galaxy\valve_sdk\IClientEntityList.h" />
+    <ClInclude Include="galaxy\valve_sdk\IClientMode.h" />
+    <ClInclude Include="galaxy\valve_sdk\IClientNetworkable.h" />
+    <ClInclude Include="galaxy\valve_sdk\IClientRenderable.h" />
+    <ClInclude Include="galaxy\valve_sdk\IClientThinkable.h" />
+    <ClInclude Include="galaxy\valve_sdk\IClientUnknown.h" />
+    <ClInclude Include="galaxy\valve_sdk\ICvar.h" />
+    <ClInclude Include="galaxy\valve_sdk\IEngineTrace.h" />
+    <ClInclude Include="galaxy\valve_sdk\IGameEvent.h" />
+    <ClInclude Include="galaxy\valve_sdk\IMaterial.h" />
+    <ClInclude Include="galaxy\valve_sdk\ISurface.h" />
+    <ClInclude Include="galaxy\valve_sdk\ISurfaceData.h" />
+    <ClInclude Include="galaxy\valve_sdk\IVEngineClient.h" />
+    <ClInclude Include="galaxy\valve_sdk\IVModelInfo.h" />
+    <ClInclude Include="galaxy\valve_sdk\IVRenderView.h" />
+    <ClInclude Include="galaxy\valve_sdk\KeyValues.h" />
+    <ClInclude Include="galaxy\valve_sdk\PlayerInfo.h" />
+    <ClInclude Include="galaxy\valve_sdk\Recv.h" />
+    <ClInclude Include="galaxy\valve_sdk\Vector.h" />
+    <ClInclude Include="galaxy\valve_sdk\VMatrix.h" />
+    <ClInclude Include="galaxy\valve_utils\Color.h" />
+    <ClInclude Include="galaxy\valve_utils\GlobalVars.h" />
+    <ClInclude Include="galaxy\valve_utils\Interfaces.h" />
+    <ClInclude Include="galaxy\valve_utils\Math.h" />
+    <ClInclude Include="galaxy\valve_utils\NetvarManager.h" />
+    <ClInclude Include="galaxy\valve_utils\SPoint.h" />
+    <ClInclude Include="galaxy\valve_utils\SRect.h" />
+    <ClInclude Include="galaxy\valve_utils\Utils.h" />
+    <ClInclude Include="galaxy\valve_utils\XorStr.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
